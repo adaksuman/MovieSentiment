@@ -1,4 +1,3 @@
-This is your new Play application
+Introduction
 =====================================
-
-This file will be packaged with your application, when using `play dist`.
+Sentiment based decisions are affected by innumerable influences and are subjected to frequent changes.The basic idea of the application is to analyze popularity of a Hollywood movie from different social media(topsy,alchemyapi,rottentomato,neilson api) by computing sentiment values from posts in those media. The popularity is measures by "sentiment value" of the movie computed from the related posts/comments/reviews obtained from social media.
