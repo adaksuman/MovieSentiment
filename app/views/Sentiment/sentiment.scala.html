@@ -1,0 +1,124 @@
+@(apiKeyNielsen: String)
+<!DOCTYPE html>
+<html>
+	<head>
+		 <title>Titli - Sentiment based marketing strategy</title>
+	
+		<link href="@routes.Assets.at("stylesheets/typeahead/search.css")" media='screen' rel='stylesheet' type='text/css' />
+		<link href="@routes.Assets.at("stylesheets/bootstrap/bootstrap.css")" media='screen' rel='stylesheet' type='text/css' />
+    <link href="@routes.Assets.at("stylesheets/bootstrap/bootstrap.responsive.css")" media='screen' rel='stylesheet' type='text/css' />
+	<style type="text/css">
+		#footer {
+			position:absolute;
+			bottom:0;
+			left:0;
+		}
+	</style>
+		<script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
+		<script src="@routes.Assets.at("javascripts/bootstrap.min.js")" type="text/javascript"></script>
+		<script src="@routes.Assets.at("javascripts/sessvars.js")" type="text/javascript"></script>
+		<script src="@routes.Assets.at("javascripts/hogan-2.0.0.js")" type="text/javascript"></script>
+		<script src="@routes.Assets.at("javascripts/typeahead.js")" type="text/javascript"></script>
+		<script src="@routes.Assets.at("javascripts/search.js")" type="text/javascript"></script>
+	</head>
+
+	<body style="background-color: #222">
+	 <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+            
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    
+                </button>
+                <a class="navbar-brand" href="/">Titli</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+               
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<div class="container">
+	    	<div class="well">
+				<div id="inputdiv" class="search search-nielsen">
+					<h1 class="title">Search Movie</h1>
+					<div class="sentiment">
+						<ul class="nav nav-pills">
+							<li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+							<li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+							<li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+							<li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+							<li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+							<li class="active" id="li_movie"><a href="javascript:void(0)" onclick="changePosition('div_movie','li_movie', 'movies')">Nielsen Top Ten</a></li>
+							<li id="li_books"><a href="javascript:void(0)" onclick="changePosition('div_books','li_books','upcMovies')">Upcoming Movies</a></li>
+						</ul>
+						<br/>
+						<div id="div_movie">
+							<input id="textbox" class="typeahead movies" type="text" name="movieName" placeholder="Movie Name" value="">
+						</div>
+						<div id="div_books" hidden="true">
+							<input id="textbox" class="typeahead upcMovies" type="text" name="upcMovies" placeholder="Upcoming Movie Name" value="">
+						</div>
+												
+						<div id="loader_id" hidden="true">
+							<img src="@routes.Assets.at("images/ajax-loader.gif")" alt="Loading....">
+							<br/>
+							<span>Analyzing data from various social media...</span>
+						</div>
+					</div>
+				</div>
+			</div>
+  			
+		</div>
+		
+		<div class="container">
+        <hr>
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p style="color: white;size: 12px;float: left;">Copyright (c) TCS-Nielsen Hackthon 2014</p>
+                </div>
+            </div>
+            <div class="row" style="float: right;color: white;size: 12px;"><span><i>This site is responsive.</i><br/>Tested with android and iOS mobile browser, also pc based Google Chrome, Firefox browser </span></div>
+        </footer>
+    </div>
+		
+	</body>
+	
+	<script>
+		$(document).ready(function() {
+			sessvars.apiKeyNielsen = "@apiKeyNielsen";
+			if(null==sessvars.movies){
+				sessvars.movies = [];
+			}
+			console.log(sessvars.apiKeyNielsen);
+			$('#loader_id').show();
+			loadTypeahead('movies');
+		});
+	</script>
+	<script>
+		var prevBarId = "div_movie";
+		var prevListId = "li_movie";
+		function changePosition(barId, listId, type){
+			$('#'+prevBarId).hide();
+			$('#'+prevListId).removeClass('active');
+			$('#'+barId).show();
+			$('#'+listId).addClass('active');
+			prevBarId = barId;
+			prevListId = listId;
+			console.log(type);
+			$('#loader_id').show();
+			loadTypeahead(type);
+		}
+	</script>
+</html>
