@@ -372,7 +372,7 @@
                     <p>Copyright (c) TCS-Nielsen Hackthon 2014</p>
                 </div>
             </div>
-            <div class="row" style="float: right;"><span><i>This site is responsive.</i><br/>Tested with android and iOS mobile browser, also pc based Google Chrome, Firefox browser </span></div>
+            <div class="row" style="float: right;"><span><i>This site is responsive.</i><br/></span></div>
         </footer>
     </div>
     <!-- /.container -->
@@ -387,12 +387,10 @@
     <script>
       var movieName = "@details.movieName";
       var score;
-      console.log(movieName);
       $.ajax({
     	 url: '/view/getAnalytics?q='+movieName,
     	 type: 'GET',
     	 success: function(e){
-    		 console.log(e);
     		 var plotBand = [{ 
                  from: 0,
                  to: 33,
@@ -496,14 +494,12 @@
         		  url: '/view/prdct?d1='+data+'&d2=@details.rating.audience_score&d3=@details.rating.critics_score&d4='+score,
         	      type: 'GET',
         	      success: function(e){
-        	      	console.log(e);
         	      	$('#loader_id_62').hide();
         	      	$('#case').show();
         	      	$('#replace-type').html('<img class="img-responsive" style="height:75px;" src='+e.response+'>');
         	      },
         	      error: function(e){
         	    	  $('#loader_id_62').hide();
-        	    	  console.log(e);
             	  }
               });
        	  }else{
@@ -513,12 +509,10 @@
       	 url: '/view/average?d1='+data+'&d2=@details.rating.audience_score&d3=@details.rating.critics_score&d4='+score,
       	 type: 'GET',
       	 success: function(e){
-      		 console.log(e);
       		$('#loader_id_2').hide();
       		loadChartForSentiment('pi-over-chart-gauge', 'Score', e.response, '');
       		var rank = "@details.rank";
       		if(rank){
-          		console.log(type);
           		if(type=='movie'){
 	      		$.ajax({
 	          		url:'/view/getAttention?rate='+e.response+'&rank=@details.rank',
@@ -540,7 +534,6 @@
           	}
       	 },
       	 error: function(e){
-      		 console.log(e);
       		 $('#loader_id_2').hide();
       	 }
         });
