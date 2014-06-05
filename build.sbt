@@ -1,4 +1,4 @@
-name := "SocialSentiment"
+name := "MovieSentiment"
 
 version := "1.0-SNAPSHOT"
 
