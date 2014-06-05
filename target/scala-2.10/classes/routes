@@ -1,0 +1,21 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /    	                        controllers.SentimentController.index()
+GET     /view   	                    controllers.SentimentController.sentiment()
+GET     /view/upcMovies	            	controllers.SentimentController.upcmngMovieSentiment(q: String, r: String, c: String)
+GET     /view/movies                	controllers.SentimentController.movieSentiment(q: String, r: String, c: String)
+
+GET		/view/prdct						controllers.SentimentController.predictSentiment(d1: String, d2: String, d3: String, d4: String)
+GET     /view/average                   controllers.SentimentController.average(d1: String, d2: String, d3: String, d4: String)
+GET     /view/getAttention	            controllers.SentimentController.geAttentions(rate: String, rank: String)
+GET		/view/listUpCmng				controllers.SentimentController.listUpCmngMvs()
+GET     /view/getAnalytics              controllers.SentimentController.getAnalysisGraphFromTW(q: String)
+GET     /view/getTPSAnalytics           controllers.SentimentController.getAnalyticsGraphFromTopsy(q: String)
+
+OPTIONS /view/*id						controllers.SentimentController.preflight(id: String)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

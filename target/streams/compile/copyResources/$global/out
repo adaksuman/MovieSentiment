@@ -1,0 +1,4 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/home/suman/my_project/MovieSentiment/conf/routes,/home/suman/my_project/MovieSentiment/target/scala-2.10/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/home/suman/my_project/MovieSentiment/conf/recommendation.json,/home/suman/my_project/MovieSentiment/target/scala-2.10/classes/recommendation.json)[0m
+[0m[[0mdebug[0m] [0m	(/home/suman/my_project/MovieSentiment/conf/application.conf,/home/suman/my_project/MovieSentiment/target/scala-2.10/classes/application.conf)[0m

@@ -4,7 +4,7 @@
 		module="moviesentiment-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20140605100512"
+		publication="20140605103004"
 		e:scalaVersion="2.10" e:sbtVersion="0.13"
 	>
 		<description>

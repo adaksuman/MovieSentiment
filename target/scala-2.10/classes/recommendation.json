@@ -1,0 +1,187 @@
+{
+	"recommendations":[{
+			"movieType": "Drama",
+			"viewers": [{
+					"type": "Adult",
+					"ageRange": "35-49",
+					"code" : "M35-49"
+				},
+				{
+					"type": "Old",
+					"ageRange": "50-90",
+					"code" : "M50-99"
+				}
+			],
+			"advertiseSite": "Entertainment"
+		},
+		{
+			"movieType": "Classic",
+			"viewers": [{
+					"type": "Adult",
+					"ageRange": "35-49",
+					"code" : "M35-49"
+				},
+				{
+					"type": "Old",
+					"ageRange": "50-90",
+					"code" : "M50-99"
+				}
+			],
+			"advertiseSite": "Family & Lifestyles"
+		},
+		{
+			"movieType": "Mystery & Suspense",
+			"viewers": [{
+					"type": "Teenage",
+					"ageRange": "12-17",
+					"code" : "M12-17"
+				},
+				{
+					"type": "Young",
+					"ageRange": "18-34",
+					"code" : "M18-34"
+				}
+			],
+			"advertiseSite": "Entertainment"
+		},
+		{
+			"movieType": "Action & Adventure",
+			"viewers": [{
+					"type": "Teenage",
+					"ageRange": "12-17",
+					"code" : "M12-17"
+				},
+				{
+					"type": "Young",
+					"ageRange": "18-34",
+					"code" : "M18-34"
+				}
+			],
+			"advertiseSite": "Entertainment"
+		},
+		{
+			"movieType": "Comedy",
+			"viewers": [{
+					"type": "Teenage",
+					"ageRange": "12-17",
+					"code" : "M12-17"
+				},
+				{
+					"type": "Young",
+					"ageRange": "18-34",
+					"code" : "M18-34"
+				},
+				{
+					"type": "Adult",
+					"ageRange": "35-49",
+					"code" : "M35-49"
+				}
+			],
+			"advertiseSite": "Entertainment"
+		},
+		{
+			"movieType": "Science Fiction & Fantasy",
+			"viewers": [{
+					"type": "Teenage",
+					"ageRange": "12-17",
+					"code" : "M12-17"
+				},
+				{
+					"type": "Young",
+					"ageRange": "18-34",
+					"code" : "M18-34"
+				}
+			],
+			"advertiseSite": "Computers & Electronics"
+		},
+		{
+			"movieType": "Documentary",
+			"viewers": [{
+					"type": "Young",
+					"ageRange": "18-34",
+					"code" : "M18-34"
+				},
+				{
+					"type": "Adult",
+					"ageRange": "35-49",
+					"code" : "M35-49"
+				}
+			],
+			"advertiseSite": "Family & Lifestyles"
+		},
+		{
+			"movieType": "Special Interest",
+			"viewers": [{
+					"type": "Young",
+					"ageRange": "18-34",
+					"code" : "M18-34"
+				},
+				{
+					"type": "Teenage",
+					"ageRange": "12-17",
+					"code" : "M12-17"
+				}
+			],
+			"advertiseSite": "Family & Lifestyles"
+		},
+		{
+			"movieType": "Animation",
+			"viewers": [{
+					"type": "Children",
+					"ageRange": "2-11",
+					"code" : "M2-11"
+				},
+				{
+					"type": "Teenage",
+					"ageRange": "12-17",
+					"code" : "M12-17"
+				}
+			],
+			"advertiseSite": "Family & Lifestyles"
+		},
+		{
+			"movieType": "Kid & Family",
+			"viewers": [{
+					"type": "Children",
+					"ageRange": "2-11",
+					"code" : "M2-11"
+				},
+				{
+					"type": "Teenage",
+					"ageRange": "12-17",
+					"code" : "M12-17"
+				},
+				{
+					"type": "Young",
+					"ageRange": "18-34",
+					"code" : "M18-34"
+				}
+			],
+			"advertiseSite": "Family & Lifestyles"
+		},
+		{
+			"movieType": "Horror",
+			"viewers": [{
+					"type": "Young",
+					"ageRange": "18-34",
+					"code" : "M18-34"
+				},
+				{
+					"type": "Adult",
+					"ageRange": "35-49",
+					"code" : "M35-49"
+				},
+				{
+					"type": "Old",
+					"ageRange": "50-90",
+					"code" : "M50-99"
+				}
+			],
+			"advertiseSite": "Entertainment"
+		}
+	],
+	"nationalTVURL": "https://nielsen.api.tibco.com:443/NationalTV/v1?noofresults=5&demographies=<q>",
+	"siteURL": "https://nielsen.api.tibco.com:443/NetView/v1?numberofresults=5&websitecategory=<q>",
+	"ageCodes": ["M2-11","M12-17","M18-34","M35-49","M50-99"],
+	"advertiseSites": ["Computers & Electronics","Entertainment","Family & Lifestyles"]
+}
